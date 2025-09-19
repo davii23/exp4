@@ -4,7 +4,161 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bug Tracking System</title>
-<link rel="stylesheet" href="style.css">
+<style>
+/* Reset defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header & Navigation Bar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: yellow;
+}
+
+/* Landing Section */
+.landing {
+    height: 100vh;
+    background-image: url("https://t4.ftcdn.net/jpg/06/65/94/91/360_F_665949150_OYjFpIsB54w7J01UPwWRRj3GUJt9tyZS.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px; /* space for navbar */
+}
+
+/* Login Box */
+.login-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+    width: 350px;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-box label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+.login-box input:focus {
+    border-color: #ff9800;
+    box-shadow: 0 0 8px rgba(255,152,0,0.8);
+    outline: none;
+}
+
+.login-box button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    background: #ff9800;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-box button:hover {
+    background: #e68900;
+}
+
+/* Sections */
+.section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 40px 40px 40px; /* top padding for navbar */
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    flex-direction: column;
+    text-align: center;
+}
+
+.section:nth-child(even) {
+    background: #e0e0e0;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #333;
+}
+
+.section p {
+    width: 70%;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+</style>
 </head>
 <body>
 
@@ -16,16 +170,16 @@
     </div>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
 
-<!-- Landing Section with Background -->
-<div class="landing">
+<!-- Landing Section -->
+<div class="landing" id="home">
     <div class="login-box">
         <h2>Login</h2>
         <form>
@@ -40,5 +194,23 @@
     </div>
 </div>
 
-</body>
-</html>
+<!-- Features Section -->
+<section id="features" class="section">
+    <h2>Features</h2>
+    <p>Our Bug Tracking System provides a centralized platform to manage and track bugs efficiently across your projects.</p>
+    <p>Key features include real-time bug reporting, assigning bugs to team members, tracking status updates, and generating detailed reports for management.</p>
+    <p>The system ensures no bug goes unnoticed and helps maintain high software quality while improving team collaboration.</p>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section">
+    <h2>About</h2>
+    <p>This Bug Tracking System was developed to help software teams streamline their development process and maintain high-quality standards.</p>
+    <p>By offering a clear overview of all issues, developers can prioritize tasks, fix critical bugs faster, and reduce production delays.</p>
+    <p>The system is designed to be user-friendly, secure, and highly customizable to suit small to large-scale software projects.</p>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>If you have questions, need support, or want to provide feedback, we’re here to help. Reach out to us through the following:</p>
